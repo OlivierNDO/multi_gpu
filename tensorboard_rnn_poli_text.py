@@ -2,7 +2,7 @@
 ###############################################################################
 #<open Anaconda prompt>
 #<activate octenv>
-#tensorboard --logdir=C:\Users\user\logs\keras_model_20190414_1832 --host localhost --port 8088
+#tensorboard --logdir=...\logs\keras_model_20190414_1832 --host localhost --port 8088
 #<in browser> : http://localhost:8088/
 
 
@@ -31,35 +31,10 @@ from tensorflow.python.client import device_lib
 # Data Processing Configuration
 ##############################################################################
 # Folders with Source Data
-liberal_folders = ['reddit_antira',
-                   'reddit_democrats',
-                   'reddit_demsocialist',
-                   'reddit_esist',
-                   'reddit_impeach_trump',
-                   'reddit_liberal',
-                   'reddit_progressive',
-                   'reddit_radicalfeminism',
-                   'reddit_feminism',
-                   'reddit_socialdemocracy',
-                   'reddit_voteblue',
-                   'reddit_the_mueller',
-                   'reddit_enoughtrumpspam',
-                   'reddit_twoxchromosomes',
-                   'reddit_latestagecapitalism',
-                   'reddit_fuckthealtright',
-                   'reddit_neoliberal']
-
-conserv_folders = ['reddit_conservative',
-                   'reddit_conservativelounge',
-                   'reddit_louderwithcrowder',
-                   'reddit_republican',
-                   'reddit_tea_party',
-                   'reddit_the_donald',
-                   'reddit_jordanpeterson',
-                   'reddit_mensrights']
-
+liberal_folders = [...]
+conserv_folders = [...]
 subfold_name = '/page_links/'
-master_folder = 'D:/poli_text/'
+master_folder = '.../poli_text/'
 vocab_size = 100000
 max_length = 75
 embed_dim = 150
@@ -67,9 +42,9 @@ embed_dim = 150
 # Model Configuration
 ##############################################################################
 model_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
-model_save_name = "D:/poli_text/model_dir/keras_model_{dt_tm}.hdf5".format(dt_tm = model_timestamp)
-result_folder = 'D:/poli_text/pyscripts/raw_embed_train_scripts/param_results/'
-log_folder = 'D:/poli_text/pyscripts/log_files/'
+model_save_name = ".../keras_model_{dt_tm}.hdf5".format(dt_tm = model_timestamp)
+result_folder = '.../param_results/'
+log_folder = '.../log_files/'
 num_epochs = 20
 max_worse_epochs = 1
 h_layer_sizes = [150, 100, 50]
